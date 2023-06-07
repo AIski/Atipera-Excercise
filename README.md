@@ -59,5 +59,8 @@ Use scenario examples:
 3. Using valid header "Allow: application/json", and valid username:
 <img width="1283" alt="image" src="https://github.com/AIski/Atipera-Excercise/assets/102914351/9a609c3b-2310-4c3a-9f25-e3c1529275e3">
 
-
+Change history:
+2.06.2023 - First commit, working, but with few issues.
+6.06.2023 - Fixed too many small services issue. Fixxed 404 and 406 error handling.
+7.06.2023 - Updated UserController logic. Modified BranchDTO, Repository DTO to use records. Modified   exception handling, using ExceptionHandler now. Modified Http Client, using WebCling instead of RestTemplate now. Updated Repository Service, simplified the code, using new APIService methods now.
 
