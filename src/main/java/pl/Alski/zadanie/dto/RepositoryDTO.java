@@ -6,11 +6,9 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class RepositoryDTO {
-    private String name;
-    private String ownerLogin;
-    private List<BranchDTO> branches;
-}
+
+public record RepositoryDTO (
+     String name,
+     String ownerLogin,
+     List<BranchDTO> branches
+){}

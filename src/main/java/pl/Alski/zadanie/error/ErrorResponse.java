@@ -1,4 +1,4 @@
-package pl.Alski.zadanie.entity;
+package pl.Alski.zadanie.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -7,16 +7,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpMediaTypeNotAcceptableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.request.WebRequest;
 
+import org.springframework.web.reactive.function.client.WebClientResponseException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-import pl.Alski.zadanie.entity.ErrorResponse;
 
 @ControllerAdvice
 public final class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(value = {HttpClientErrorException.class})
+    @ExceptionHandler(value = {WebClientResponseException.class})
     protected ResponseEntity<Object> handleClientError(RuntimeException ex, WebRequest request){
         ErrorResponse response = new ErrorResponse(404,"User not found. Please give an existing github user.");
         return handleExceptionInternal(ex, response,
