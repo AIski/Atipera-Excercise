@@ -9,7 +9,6 @@ import java.util.List;
 
 @Mapper(componentModel = "spring", uses = {BranchMapper.class})
 public interface RepositoryMapper {
-
     @Mapping(source = "owner.login", target = "ownerLogin")
     RepositoryDTO toRepositoryDTO(Repository repo);
 

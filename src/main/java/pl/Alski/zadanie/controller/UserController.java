@@ -16,8 +16,7 @@ public class UserController {
     RepositoryService repositoryService;
 
     @PostMapping(value = "/{username}",  produces = {MediaType.APPLICATION_JSON_VALUE})
-    public List<RepositoryDTO> getRepositories(@PathVariable String username,
-                                               @RequestHeader("Accept") String acceptHeader){
+    public List<RepositoryDTO> getRepositories(@PathVariable String username){
             return repositoryService.getUserRepositoriesWithoutForks(username);
     }
 
